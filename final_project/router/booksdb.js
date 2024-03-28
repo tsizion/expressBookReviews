@@ -1,5 +1,8 @@
 let books = {
-      1: {"author": "Chinua Achebe","title": "Things Fall Apart", "reviews": {} },
+      1: {"author": "Chinua Achebe","title": "Things Fall Apart", "reviews": {
+        "1": {"user": "user1", "comment": "Great book!"},
+        "2": {"user": "user2", "comment": "Loved it!"}
+  }},
       2: {"author": "Hans Christian Andersen","title": "Fairy tales", "reviews": {} },
       3: {"author": "Dante Alighieri","title": "The Divine Comedy", "reviews": {} },
       4: {"author": "Unknown","title": "The Epic Of Gilgamesh", "reviews": {} },
