@@ -30,7 +30,7 @@ public_users.post("/register", (req, res) => {
 public_users.get('/', async (req, res) => {
     try {
         // Make a GET request to fetch the list of books
-        const response = await axios.get('http://api.example.com/books');
+        const response = await axios.get('http://localhost:3000/');
 
         // Extract the books from the response data
         const books = response.data;
@@ -52,7 +52,7 @@ public_users.get('/isbn/:isbn', async (req, res) => {
 
     try {
         // Make a GET request to fetch the book details based on ISBN
-        const response = await axios.get(`http://api.example.com/books/${isbn}`);
+        const response = await axios.get(`http://localhost:3000/isbn/${isbn}`);
 
         // Extract the book details from the response data
         const book = response.data;
@@ -80,7 +80,7 @@ public_users.get('/author/:author', async (req, res) => {
 
     try {
         // Make a GET request to fetch the books by the specified author
-        const response = await axios.get(`http://api.example.com/books?author=${author}`);
+        const response = await axios.get(`http://localhost:3000/author?author=${author}`);
 
         // Extract the books by the author from the response data
         const booksByAuthor = response.data;
@@ -106,7 +106,7 @@ public_users.get('/title/:title', async (req, res) => {
 
     try {
         // Make a GET request to fetch the books with the specified title
-        const response = await axios.get(`http://api.example.com/books?title=${title}`);
+        const response = await axios.get(`http://tocalhost:3000/title/?title=${title}`);
 
         // Extract the books with the specified title from the response data
         const booksByTitle = response.data;

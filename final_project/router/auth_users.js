@@ -37,7 +37,7 @@ regd_users.post("/login", (req, res) => {
 regd_users.put("/auth/review/:isbn", (req, res) => {
     const { isbn } = req.params;
     const { review } = req.query;
-    const { username } = req.user; // Extract username from authenticated user
+    const username = req.session.username; // Extract username from session
 
     // Check if review is provided
     if (!review) {
@@ -65,6 +65,8 @@ regd_users.put("/auth/review/:isbn", (req, res) => {
     // Return success message
     return res.status(200).json({ message: 'Review added/modified successfully' });
 });
+
+
 
 regd_users.delete("/auth/review/:isbn", (req, res) => {
     const { isbn } = req.params;
